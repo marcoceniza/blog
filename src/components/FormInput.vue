@@ -22,6 +22,7 @@ const emit = defineEmits(['update:modelValue']);
         :disabled="disabled"
         :value="modelValue"
         @input="emit('update:modelValue', $event.target.value)"
-        class="w-full mb-2"
+        class="w-full mb-3"
+        v-bind="$attrs"
     />
 </template>

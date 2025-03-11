@@ -21,15 +21,21 @@ const router = createRouter({
       component: () => import('../views/RegisterView.vue'),
     },
     {
+      path: '/posts/:id',
+      name: '/posts/:id',
+      component: () => import('../views/posts/View.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
       path: '/posts/add',
       name: '/posts/add',
       component: () => import('../views/posts/Add.vue'),
       meta: { requiresAuth: true },
     },
     {
-      path: '/posts/:id',
-      name: '/posts/:id',
-      component: () => import('../views/posts/View.vue'),
+      path: '/posts/edit/:id',
+      name: '/posts/edit/:id',
+      component: () => import('../views/posts/Update.vue'),
       meta: { requiresAuth: true },
     },
     // {

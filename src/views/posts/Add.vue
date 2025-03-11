@@ -42,7 +42,7 @@ onMounted(() => { fetchPosts() });
                     <p>{{ userPost.content }} <span class="block">Created by {{ userPost.user.name }} in {{ userPost.formatted_created_at }}</span></p>
                     <div class="flex gap-4">
                         <RouterLink :to="`${userPost.id}`" class="mr-5">view</RouterLink>
-                        <RouterLink :to="`posts/${userPost.id}`" class="mr-5">edit</RouterLink>
+                        <RouterLink :to="`/posts/edit/${userPost.id}`" class="mr-5">edit</RouterLink>
                         <RouterLink to="#" @click.prevent="deletePost(userPost.id)" class="mr-5">delete</RouterLink>
                     </div>
                 </section>

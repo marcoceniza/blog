@@ -1,11 +1,13 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios';
+import { useRouter } from 'vue-router';
 
 export const usePostsStore = defineStore('posts', () => {
   const posts = ref([]);
   const userPosts = ref([]);
   const message = ref('');
+  const router = useRouter();
 
   const fetchPosts = async () => {
     try {
@@ -44,6 +46,7 @@ export const usePostsStore = defineStore('posts', () => {
       const res = await axios.put(`/api/posts/${id}`, formData);
 
       message.value = res.data.message;
+      router.push({ name: 'home' });
     }catch(error) {
       if (error.response) {
         console.error(error.response.data.message || 'Something went wrong!');

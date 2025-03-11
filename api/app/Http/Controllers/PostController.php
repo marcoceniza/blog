@@ -35,7 +35,7 @@ class PostController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|min:4',
-            'content' => 'required:min:4'
+            'content' => 'required|min:4'
         ]);
 
         Post::create([...$validated, 'user_id' => Auth::id()]);
@@ -67,7 +67,7 @@ class PostController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|min:4',
-            'content' => 'required:min:4'
+            'content' => 'required|min:4'
         ]);
 
         $post->update($validated);

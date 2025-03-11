@@ -1,6 +1,4 @@
 <script setup>
-import FormInput from '@/components/FormInput.vue';
-import Button from '@/components/Button.vue';
 import { usePostsStore } from '@/stores/postsStore.js'
 import { storeToRefs } from 'pinia';
 import PostList from '@/components/PostList.vue'

@@ -9,8 +9,8 @@ const { token } = storeToRefs(useAuthStore());
 </script>
 
 <template>
-  <header>
-    <div class="container">
+  <header class="bg-[#2b7fff] h-[50px] leading-[50px] text-white">
+    <div class="container mx-auto">
       <nav class="flex justify-between">
         <RouterLink to="/">Home</RouterLink>
         <div v-if="token">

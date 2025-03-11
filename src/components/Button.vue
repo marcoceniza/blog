@@ -12,7 +12,9 @@ const emit = defineEmits(['handle-click']);
     <button
         :type="type"
         :disabled="disabled"
+        v-bind="$attrs"
         @click="emit('handle-click')"
+        class="cursor-pointer w-full"
     >
         {{ title }}
     </button>
