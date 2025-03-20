@@ -15,7 +15,7 @@ const formData = reactive({
 <template>
     <div class="container mx-auto relative">
         <form @submit.prevent="authenticate('login', formData)">
-            <div class="w-[400px] bg-gray-200 mx-auto p-6 rounded-s absolute left-0 right-0 top-[-50%] translate-y-[50%]">
+            <div class="w-[400px] bg-gray-200 mx-auto p-6 rounded-s absolute left-0 right-0 top-[-50%] translate-y-[50%] max-w-full">
                 <h1 class="text-center text-2xl mb-6">Login Here</h1>
                 <FormInput
                     v-model="formData.email"
